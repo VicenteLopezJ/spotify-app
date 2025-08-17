@@ -1,0 +1,15 @@
+<section class="py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <div *ngFor="let cancion of nuevasCanciones" class="col">
+        <div class="card h-100">
+          <img class="card-img-top" [src]="cancion.images[0]?.url" alt="Portada del álbum">
+          <div class="card-body">
+            <h5 class="card-title">{{ cancion.name }}</h5>
+            <p class="card-text">{{ cancion.artists[0]?.name }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

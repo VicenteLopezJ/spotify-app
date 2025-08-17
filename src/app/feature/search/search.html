@@ -1,0 +1,22 @@
+<input 
+  type="text" 
+  (keyup)="buscar($event.target.value)" 
+  class="form-control" 
+  placeholder="Buscar..." 
+/>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <div *ngFor="let artista of artistas" class="col">
+        <div class="card h-100">
+          <img class="card-img-top" [src]="artista.images[0]?.url" alt="Foto del artista">
+          <div class="card-body">
+            <h5 class="card-title">{{ artista.name }}</h5>
+            <p class="card-text">{{ artista.followers.total }} seguidores</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
